@@ -4,9 +4,16 @@ var guess1 = document.getElementById("g1");
 var guess2 = document.getElementById("g2");
 var guess3 = document.getElementById("g3");
 
-container.addEventListener("click", () => {
-    guess1.style.backgroundColor = "blue"
-})
+container.addEventListener("click", pick1)
+
+function pick1() {
+    if (guess1.clicked == "true") {
+        guess1.style.backgroundColor = "red"
+    }
+    else {
+        guess1.style.backgroundColor = "blue"
+    }
+}
 
 // container.addEventListener("click", ({target}) => {
 //     const chance = target.closest(".guess");
