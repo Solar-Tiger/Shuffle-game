@@ -1,12 +1,30 @@
 var container = document.querySelector(".container");
 var text = document.getElementById("text");
+var guess1 = document.getElementById("g1");
+var guess2 = document.getElementById("g2");
+var guess3 = document.getElementById("g3");
 
-container.addEventListener("click", ({target}) => {
-    const chance = target.closest(".guess");
-    if (chance) {
-        console.log(target.textContent)
-    }
+container.addEventListener("click", () => {
+    guess1.style.backgroundColor = "blue"
 })
+
+// container.addEventListener("click", ({target}) => {
+//     const chance = target.closest(".guess");
+//     if (chance) {
+//         text.innerHTML = "Booyah"
+//     }
+// })
+
+// for (i = 0; i < guess.length; i++) {
+//     guess[i].addEventListener("click", function () {
+//         if (guess[i].clicked == "true") {
+//             text.innerHTML = "Yay?"
+//         }
+//         else {
+//             text.innerHTML = "Boo"
+//         }
+//     })
+// }
 
 // guess.forEach(guess => {
 //     guess.addEventListener("click", random => {
