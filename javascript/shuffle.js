@@ -1,19 +1,23 @@
 var container = document.querySelector(".container");
-var text = document.getElementById("text");
-var guess1 = document.getElementById("g1");
-var guess2 = document.getElementById("g2");
-var guess3 = document.getElementById("g3");
+var text = document.querySelector(".text")
 
-container.addEventListener("click", pick1)
+container.addEventListener("click", e => {
+    if (e.target.matches(".box1")) {
+        text.innerHTML = "Box 1"
+    }
+    if (e.target.matches(".box2")) {
+        text.innerHTML = "Box 2"
+    }
+    if (e.target.matches(".box3")) {
+        text.innerHTML = "Box 3"
+    }
+})
 
-function pick1() {
-    if (guess1.clicked == "true") {
-        guess1.style.backgroundColor = "red"
+document.addEventListener("click", e => {
+    if (e.target.matches(".button2")) {
+        text.innerHTML = "Right or Wrong?"
     }
-    else {
-        guess1.style.backgroundColor = "blue"
-    }
-}
+})
 
 // container.addEventListener("click", ({target}) => {
 //     const chance = target.closest(".guess");
@@ -59,10 +63,6 @@ function shuffle1() {
     box1.style.animation = "box1 2.5s linear forwards"
     box2.style.animation = "box2 2.5s linear forwards"
     box3.style.animation = "box3 2.5s linear forwards"
-
-    // document.getElementById("hidden1").style.animation = "hidden1 3s forwards"
-    // document.getElementById("hidden2").style.animation = "hidden2 3s forwards"
-    // document.getElementById("hidden3").style.animation = "hidden3 3s forwards"
 }
 
 function shuffle2() {
@@ -73,10 +73,6 @@ function shuffle2() {
     box1.style.animation = "box4 2.5s linear forwards"
     box2.style.animation = "box5 2.5s linear forwards"
     box3.style.animation = "box6 2.5s linear forwards"
-
-    // document.getElementById("hidden1").style.animation = "hidden1 3s forwards"
-    // document.getElementById("hidden2").style.animation = "hidden2 3s forwards"
-    // document.getElementById("hidden3").style.animation = "hidden3 3s forwards"
 }
 function shuffle3() {
     const box1 = document.getElementById("box1")
@@ -86,8 +82,4 @@ function shuffle3() {
     box1.style.animation = "box7 2.5s linear forwards"
     box2.style.animation = "box8 2.5s linear forwards"
     box3.style.animation = "box9 2.5s linear forwards"
-
-    // document.getElementById("hidden1").style.animation = "hidden1 3s forwards"
-    // document.getElementById("hidden2").style.animation = "hidden2 3s forwards"
-    // document.getElementById("hidden3").style.animation = "hidden3 3s forwards"
 }

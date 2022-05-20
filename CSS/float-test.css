@@ -1,19 +1,14 @@
 * {
     box-sizing: border-box
 }
-#color {
-    transition: background-color 5s, font-size 5s, ;
-}
 .container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 800px;
     height: 500px;
     border: 2px solid black;
-}
-#g1, #g2, #g3 {
-    text-decoration: none;
 }
 .box1, .box2, .box3 {
     display: flex;
@@ -27,27 +22,25 @@
     margin: 5px;
     width: 50px;
     height: 50px;
-}
-#hidden1, #hidden2, #hidden3 {
+    text-decoration: none;
     color: yellow;
     font-size: 32px;
-    opacity: 1;
 }
 .button {
     margin: 10px;
 }
 @keyframes box1 {
-    0% {left: 0px; top: 0px;}
-    10% {left: 250px; top: 90px;}
-    20% {left: -275px; top: 150px;}
-    30% {left: 225px; top: -75px;}
-    40% {left: -180px; top: 190px;}
-    50% {left: 170px; top: -160px;}
-    60% {left: -130px; top: 210px;}
-    70% {left: 220px; top: 110px;}
+    0% {left: 0px; top: 0px; color: yellow;}
+    10% {left: 250px; top: 90px; color: yellow;}
+    20% {left: -275px; top: 150px; color: yellow;}
+    30% {left: 225px; top: -75px; color: yellow;}
+    40% {left: -180px; top: 190px; color: yellow;}
+    50% {left: 170px; top: -160px; color: yellow;}
+    60% {left: -130px; top: 210px; color: yellow;}
+    70% {left: 220px; top: 110px; color: yellow;}
     80% {left: -255px; top: 90px;}
     90% {left: 230px; top: -120px;}
-    100% {left: 60px; top: 0px;}
+    100% {left: 60px; top: 0px; color: brown;}
 }
 @keyframes box2 {
     0% {left: 0px; top: 0px;}
@@ -155,16 +148,4 @@
     80% {left: -80px; top: 175px;}
     90% {left: 230px; top: -120px;}
     100% {left: -60px; top: 0px;}
-}
-@keyframes hidden1 {
-    from{opacity: 1;}
-    to{opacity: 0;}
-}
-@keyframes hidden2 {
-    from{opacity: 1;}
-    to{opacity: 0;}
-}
-@keyframes hidden3 {
-    from{opacity: 1;}
-    to{opacity: 0;}
 }
