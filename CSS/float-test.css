@@ -29,12 +29,17 @@
 .button {
     margin: 10px;
 }
-.circle {
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin: 5px;
+@keyframes box11 {
+    from {left: 0px;}
+    to {left: 0px;}
+}
+@keyframes box12 {
+    from {left: 0px;}
+    to {left: 0px;}
+}
+@keyframes box13 {
+    from {left: 0px;}
+    to {left: 0px;}
 }
 @keyframes box1 {
     0% {left: 0px; top: 0px; color: yellow;}
@@ -50,109 +55,109 @@
     100% {left: 60px; top: 0px; color: brown;}
 }
 @keyframes box2 {
-    0% {left: 0px; top: 0px;}
-    10% {left: -210px; top: -100px;}
-    20% {left: 230px; top: 195px;}
-    30% {left: -95px; top: -45px;}
-    40% {left: 165px; top: 90px;}
-    50% {left: -245px; top: -160px;}
-    60% {left: 135px; top: 235px;}
-    70% {left: -145px; top: -190px;}
+    0% {left: 0px; top: 0px; color: yellow;}
+    10% {left: -210px; top: -100px; color: yellow;}
+    20% {left: 230px; top: 195px; color: yellow;}
+    30% {left: -95px; top: -45px; color: yellow;}
+    40% {left: 165px; top: 90px; color: yellow;}
+    50% {left: -245px; top: -160px; color: yellow;}
+    60% {left: 135px; top: 235px; color: yellow;}
+    70% {left: -145px; top: -190px; color: yellow;}
     80% {left: 245px; top: 90px;}
     90% {left: -180px; top: -245px;}
     95% {left: 0px; top: 135px;}
-    100% {left: 60px; top: 0px;}
+    100% {left: 60px; top: 0px; color: brown;}
 }
 @keyframes box3 {
-    0% {left: 0px; top: 0px;}
-    10% {left: 250px; top: -90px;}
-    20% {left: -230px; top: 150px;}
-    30% {left: 245px; top: -175px;}
-    40% {left: -120px; top: 90px;}
-    50% {left: 180px; top: -125px;}
-    60% {left: -80px; top: 210px;}
-    70% {left: 135px; top: -110px;}
+    0% {left: 0px; top: 0px; color: yellow;}
+    10% {left: 250px; top: -90px; color: yellow;}
+    20% {left: -230px; top: 150px; color: yellow;}
+    30% {left: 245px; top: -175px; color: yellow;}
+    40% {left: -120px; top: 90px; color: yellow;}
+    50% {left: 180px; top: -125px; color: yellow;}
+    60% {left: -80px; top: 210px; color: yellow;}
+    70% {left: 135px; top: -110px; color: yellow;}
     80% {left: -80px; top: 175px;}
     90% {left: 230px; top: -120px;}
-    100% {left: -120px; top: 0px;}
+    100% {left: -120px; top: 0px; color: brown;}
 }
 @keyframes box4 {
-    0% {left: 0px; top: 0px;}
-    10% {left: 250px; top: 90px;}
-    20% {left: -275px; top: 150px;}
-    30% {left: 225px; top: -75px;}
-    40% {left: -180px; top: 190px;}
-    50% {left: 170px; top: -160px;}
-    60% {left: -130px; top: 210px;}
-    70% {left: 220px; top: 110px;}
+    0% {left: 0px; top: 0px; color: yellow;}
+    10% {left: 250px; top: 90px; color: yellow;}
+    20% {left: -275px; top: 150px; color: yellow;}
+    30% {left: 225px; top: -75px; color: yellow;}
+    40% {left: -180px; top: 190px; color: yellow;}
+    50% {left: 170px; top: -160px; color: yellow;}
+    60% {left: -130px; top: 210px; color: yellow;}
+    70% {left: 220px; top: 110px; color: yellow;}
     80% {left: -255px; top: 90px;}
     90% {left: 230px; top: -120px;}
-    100% {left: 120px; top: 0px;}
+    100% {left: 120px; top: 0px; color: brown;}
 }
 @keyframes box5 {
-    0% {left: 0px; top: 0px;}
-    10% {left: -210px; top: -100px;}
-    20% {left: 230px; top: 195px;}
-    30% {left: -95px; top: -45px;}
-    40% {left: 165px; top: 90px;}
-    50% {left: -245px; top: -160px;}
-    60% {left: 135px; top: 235px;}
-    70% {left: -145px; top: -190px;}
+    0% {left: 0px; top: 0px; color: yellow;}
+    10% {left: -210px; top: -100px; color: yellow;}
+    20% {left: 230px; top: 195px; color: yellow;}
+    30% {left: -95px; top: -45px; color: yellow;}
+    40% {left: 165px; top: 90px; color: yellow;}
+    50% {left: -245px; top: -160px; color: yellow;}
+    60% {left: 135px; top: 235px; color: yellow;}
+    70% {left: -145px; top: -190px; color: yellow;}
     80% {left: 245px; top: 90px;}
     90% {left: -180px; top: -245px;}
     95% {left: 0px; top: 135px;}
-    100% {left: -60px; top: 0px;}
+    100% {left: -60px; top: 0px; color: brown;}
 }
 @keyframes box6 {
-    0% {left: 0px; top: 0px;}
-    10% {left: 250px; top: -90px;}
-    20% {left: -230px; top: 150px;}
-    30% {left: 245px; top: -175px;}
-    40% {left: -120px; top: 90px;}
-    50% {left: 180px; top: -125px;}
-    60% {left: -80px; top: 210px;}
-    70% {left: 135px; top: -110px;}
+    0% {left: 0px; top: 0px; color: yellow;}
+    10% {left: 250px; top: -90px; color: yellow;}
+    20% {left: -230px; top: 150px; color: yellow;}
+    30% {left: 245px; top: -175px; color: yellow;}
+    40% {left: -120px; top: 90px; color: yellow;}
+    50% {left: 180px; top: -125px; color: yellow;}
+    60% {left: -80px; top: 210px; color: yellow;}
+    70% {left: 135px; top: -110px; color: yellow;}
     80% {left: -80px; top: 175px;}
     90% {left: 230px; top: -120px;}
-    100% {left: -60px; top: 0px;}
+    100% {left: -60px; top: 0px; color: brown;}
 }
 @keyframes box7 {
-    0% {left: 0px; top: 0px;}
-    10% {left: 250px; top: 90px;}
-    20% {left: -275px; top: 150px;}
-    30% {left: 225px; top: -75px;}
-    40% {left: -180px; top: 190px;}
-    50% {left: 170px; top: -160px;}
-    60% {left: -130px; top: 210px;}
-    70% {left: 220px; top: 110px;}
+    0% {left: 0px; top: 0px; color: yellow;}
+    10% {left: 250px; top: 90px; color: yellow;}
+    20% {left: -275px; top: 150px; color: yellow;}
+    30% {left: 225px; top: -75px; color: yellow;}
+    40% {left: -180px; top: 190px; color: yellow;}
+    50% {left: 170px; top: -160px; color: yellow;}
+    60% {left: -130px; top: 210px; color: yellow;}
+    70% {left: 220px; top: 110px; color: yellow;}
     80% {left: -255px; top: 90px;}
     90% {left: 230px; top: -120px;}
-    100% {left: 0px; top: 0px;}
+    100% {left: 0px; top: 0px; color: brown;}
 }
 @keyframes box8 {
-    0% {left: 0px; top: 0px;}
-    10% {left: -210px; top: -100px;}
-    20% {left: 230px; top: 195px;}
-    30% {left: -95px; top: -45px;}
-    40% {left: 165px; top: 90px;}
-    50% {left: -245px; top: -160px;}
-    60% {left: 135px; top: 235px;}
-    70% {left: -145px; top: -190px;}
+    0% {left: 0px; top: 0px; color: yellow;}
+    10% {left: -210px; top: -100px; color: yellow;}
+    20% {left: 230px; top: 195px; color: yellow;}
+    30% {left: -95px; top: -45px; color: yellow;}
+    40% {left: 165px; top: 90px; color: yellow;}
+    50% {left: -245px; top: -160px; color: yellow;}
+    60% {left: 135px; top: 235px; color: yellow;}
+    70% {left: -145px; top: -190px; color: yellow;}
     80% {left: 245px; top: 90px;}
     90% {left: -180px; top: -245px;}
     95% {left: 0px; top: 135px;}
-    100% {left: 60px; top: 0px;}
+    100% {left: 60px; top: 0px; color: brown;}
 }
 @keyframes box9 {
-    0% {left: 0px; top: 0px;}
-    10% {left: 250px; top: -90px;}
-    20% {left: -230px; top: 150px;}
-    30% {left: 245px; top: -175px;}
-    40% {left: -120px; top: 90px;}
-    50% {left: 180px; top: -125px;}
-    60% {left: -80px; top: 210px;}
-    70% {left: 135px; top: -110px;}
+    0% {left: 0px; top: 0px; color: yellow;}
+    10% {left: 250px; top: -90px; color: yellow;}
+    20% {left: -230px; top: 150px; color: yellow;}
+    30% {left: 245px; top: -175px; color: yellow;}
+    40% {left: -120px; top: 90px; color: yellow;}
+    50% {left: 180px; top: -125px; color: yellow;}
+    60% {left: -80px; top: 210px; color: yellow;}
+    70% {left: 135px; top: -110px; color: yellow;}
     80% {left: -80px; top: 175px;}
     90% {left: 230px; top: -120px;}
-    100% {left: -60px; top: 0px;}
+    100% {left: -60px; top: 0px; color: brown;}
 }

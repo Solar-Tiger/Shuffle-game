@@ -1,5 +1,8 @@
 var container = document.querySelector(".container");
 var text = document.querySelector(".text")
+var box1 = document.getElementById("box1")
+var box2 = document.getElementById("box2")
+var box3 = document.getElementById("box3")
 
 container.addEventListener("click", e => {
     if (e.target.matches(".box1")) {
@@ -10,12 +13,6 @@ container.addEventListener("click", e => {
     }
     if (e.target.matches(".box3")) {
         text.innerHTML = "Box 3"
-    }
-})
-
-document.addEventListener("click", e => {
-    if (e.target.matches(".button2")) {
-        text.innerHTML = "Right or Wrong?"
     }
 })
 
@@ -56,30 +53,27 @@ var randFunc = [shuffle1, shuffle2, shuffle3];
 document.querySelector(".button").addEventListener("click", () => {randFunc[Math.floor(Math.random() * randFunc.length)]();});
 
 function shuffle1() {
-    const box1 = document.getElementById("box1")
-    const box2 = document.getElementById("box2")
-    const box3 = document.getElementById("box3")
-
     box1.style.animation = "box1 2.5s linear forwards"
     box2.style.animation = "box2 2.5s linear forwards"
     box3.style.animation = "box3 2.5s linear forwards"
 }
 
 function shuffle2() {
-    const box1 = document.getElementById("box1")
-    const box2 = document.getElementById("box2")
-    const box3 = document.getElementById("box3")
-
     box1.style.animation = "box4 2.5s linear forwards"
     box2.style.animation = "box5 2.5s linear forwards"
     box3.style.animation = "box6 2.5s linear forwards"
 }
 function shuffle3() {
-    const box1 = document.getElementById("box1")
-    const box2 = document.getElementById("box2")
-    const box3 = document.getElementById("box3")
-
     box1.style.animation = "box7 2.5s linear forwards"
     box2.style.animation = "box8 2.5s linear forwards"
     box3.style.animation = "box9 2.5s linear forwards"
 }
+document.addEventListener("click", e => {
+    if (e.target.matches(".button2")) {
+        text.innerHTML = "Right or Wrong?"
+        box1.style.animation = "box11 2s linear"
+        box2.style.animation = "box12 2s linear"
+        box3.style.animation = "box13 2s linear"
+    }
+})
+console.log(box1)
