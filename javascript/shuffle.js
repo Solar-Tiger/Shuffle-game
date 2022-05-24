@@ -1,5 +1,6 @@
 var container = document.querySelector(".container");
 var text = document.querySelector(".text")
+var btn = document.querySelector(".button")
 var box1 = document.getElementById("box1")
 var box2 = document.getElementById("box2")
 var box3 = document.getElementById("box3")
@@ -16,41 +17,14 @@ container.addEventListener("click", e => {
     }
 })
 
-// container.addEventListener("click", ({target}) => {
-//     const chance = target.closest(".guess");
-//     if (chance) {
-//         text.innerHTML = "Booyah"
-//     }
-// })
-
-// for (i = 0; i < guess.length; i++) {
-//     guess[i].addEventListener("click", function () {
-//         if (guess[i].clicked == "true") {
-//             text.innerHTML = "Yay?"
-//         }
-//         else {
-//             text.innerHTML = "Boo"
-//         }
-//     })
-// }
-
-// guess.forEach(guess => {
-//     guess.addEventListener("click", random => {
-//         if (guess1.clicked == true) {
-//             text.innerHTML = "Right"
-//         }
-//         else if (guess2.clicked && guess3.clicked == true) {
-//             text.innerHTML = "Wrong"
-//         }
-//         else {
-//             text.innerHTML = "Bogus"
-//         }
-//     });
-// });
-
 var randFunc = [shuffle1, shuffle2, shuffle3];
 
-document.querySelector(".button").addEventListener("click", () => {randFunc[Math.floor(Math.random() * randFunc.length)]();});
+btn.addEventListener("click", (fade) => {
+    if (fade.target.matches(".button")) {
+        box1.style.animation = "box1fade 5s"
+    }
+})
+btn.addEventListener("click", () => {randFunc[Math.floor(Math.random() * randFunc.length)]();});
 
 function shuffle1() {
     box1.style.animation = "box1 2.5s linear forwards"
@@ -76,4 +50,3 @@ document.addEventListener("click", e => {
         box3.style.animation = "box13 2s linear"
     }
 })
-console.log(box1)
