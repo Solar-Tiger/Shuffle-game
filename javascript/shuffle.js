@@ -1,9 +1,9 @@
-var container = document.querySelector(".container");
-var text = document.querySelector(".text")
-var btn = document.querySelector(".button")
-var box1 = document.getElementById("box1")
-var box2 = document.getElementById("box2")
-var box3 = document.getElementById("box3")
+const container = document.querySelector(".container");
+const text = document.querySelector(".text")
+const btn = document.querySelector(".button")
+const box1 = document.getElementById("box1")
+const box2 = document.getElementById("box2")
+const box3 = document.getElementById("box3")
 
 container.addEventListener("click", e => {
     if (e.target.matches(".box1")) {
@@ -17,14 +17,11 @@ container.addEventListener("click", e => {
     }
 })
 
-var randFunc = [shuffle1, shuffle2, shuffle3];
+const randFunc = [shuffle1, shuffle2, shuffle3];
 
-btn.addEventListener("click", (fade) => {
-    if (fade.target.matches(".button")) {
-        box1.style.animation = "box1fade 5s"
-    }
-})
-btn.addEventListener("click", () => {randFunc[Math.floor(Math.random() * randFunc.length)]();});
+btn.addEventListener("click", () => {
+    randFunc[Math.floor(Math.random() * randFunc.length)]();
+});
 
 function shuffle1() {
     box1.style.animation = "box1 2.5s linear forwards"
@@ -50,3 +47,62 @@ document.addEventListener("click", e => {
         box3.style.animation = "box13 2s linear"
     }
 })
+
+const testing = document.querySelector(".test");
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+//                Running 1 function before another
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+function test() {
+    console.log("I am test")
+}
+function crash() {
+    console.log("I am Crash")
+}
+
+setTimeout(test, 2000);
+crash()
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+//                  Controller function 2 ways
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+const controller = function() {
+    console.log("PS5 Controller")
+}
+
+testing.addEventListener("click", controller)
+
+testing.addEventListener("click", function() {
+    console.log("PS5 Controller")
+})
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+//             Anonymous Function and Arror Function
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+setTimeout(function() {
+    console.log("Anonymous Function")
+}, 3000)
+
+setTimeout( () => {
+    console.log("Anonymous Function")
+}, 3000)
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+//             .addEventListener Callback Function
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+testing.addEventListener("click", function() {
+    setTimeout(() => 
+    console.log("I am Groot"),
+        3000)
+
+    typing()
+    }
+)
+
+const typing = function() {
+    console.log("I'm typing a message...")
+}
