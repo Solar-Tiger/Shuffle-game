@@ -24,20 +24,20 @@ btn.addEventListener("click", () => {
 });
 
 function shuffle1() {
-    box1.style.animation = "box1 2.5s linear forwards"
-    box2.style.animation = "box2 2.5s linear forwards"
-    box3.style.animation = "box3 2.5s linear forwards"
+    box1.style.animation = "box1fade 4s linear, box1 2.5s linear 4s forwards"
+    box2.style.animation = "box2fade 4s linear, box2 2.5s linear 4s forwards"
+    box3.style.animation = "box3fade 4s linear, box3 2.5s linear 4s forwards"
 }
 
 function shuffle2() {
-    box1.style.animation = "box4 2.5s linear forwards"
-    box2.style.animation = "box5 2.5s linear forwards"
-    box3.style.animation = "box6 2.5s linear forwards"
+    box1.style.animation = "box4fade 4s linear, box4 2.5s linear 4s forwards"
+    box2.style.animation = "box5fade 4s linear, box5 2.5s linear 4s forwards"
+    box3.style.animation = "box6fade 4s linear, box6 2.5s linear 4s forwards"
 }
 function shuffle3() {
-    box1.style.animation = "box7 2.5s linear forwards"
-    box2.style.animation = "box8 2.5s linear forwards"
-    box3.style.animation = "box9 2.5s linear forwards"
+    box1.style.animation = "box7fade 4s linear, box7 2.5s linear 4s forwards"
+    box2.style.animation = "box8fade 4s linear, box8 2.5s linear 4s forwards"
+    box3.style.animation = "box9fade 4s linear, box9 2.5s linear 4s forwards"
 }
 document.addEventListener("click", e => {
     if (e.target.matches(".button2")) {
