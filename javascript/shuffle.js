@@ -1,9 +1,11 @@
 const container = document.querySelector(".container");
 const text = document.querySelector(".text")
 const btn = document.querySelector(".button")
-const box1 = document.getElementById("box1")
-const box2 = document.getElementById("box2")
-const box3 = document.getElementById("box3")
+const box1 = document.querySelector(".box1")
+const box2 = document.querySelector(".box2")
+const box3 = document.querySelector(".box3")
+const right = document.querySelector(".right")
+const wrong = document.querySelector(".wrong")
 
 container.addEventListener("click", e => {
     if (e.target.matches(".box1")) {
