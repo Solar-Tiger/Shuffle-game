@@ -27,13 +27,13 @@
     font-size: 32px;
     cursor: pointer;
 }
-.right, .wrong {
+.right, .wrong, .wrong2 {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 48px;
-    opacity: 0;
-    display: none;
+    /* opacity: 0; */
+    display: block;
 }
 .button {
     margin: 10px;
@@ -170,46 +170,19 @@
     90% {left: 230px; top: -120px;}
     100% {left: -60px; top: 0px; color: brown;}
 }
-@keyframes box1fade {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
+@keyframes fade {
+    0% {opacity: 1; top: 0px;}
+    50% {opacity: 1; top: 0px;}
+    100% {opacity: 1; top: -9999px;}
 }
-@keyframes box2fade {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
-@keyframes box3fade {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
-@keyframes box4fade {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
-@keyframes box5fade {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
-@keyframes box6fade {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
-@keyframes box7fade {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
-@keyframes box8fade {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
-@keyframes box9fade {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
-@keyframes right {
+@keyframes answers {
     0% {display: none; opacity: 0;}
-    50% {display: inline-block; opacity: 1;}
+    50% {display: block; opacity: 1;}
     100% {display: none; opacity: 0;}
+}
+@keyframes unfade {
+    0% {display: none; opacity: 0;}
+    100% {display: inline-block; opacity: 1;}
 }
 /* Stacking animation testing with a "Circle"
 .circle {
