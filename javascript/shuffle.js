@@ -1,5 +1,4 @@
 const container = document.querySelector(".container");
-const text = document.querySelector(".text")
 const btn = document.querySelector(".button")
 const box1 = document.querySelector(".box1")
 const box2 = document.querySelector(".box2")
@@ -7,6 +6,10 @@ const box3 = document.querySelector(".box3")
 const right = document.querySelector(".right")
 const wrong = document.querySelector(".wrong")
 const wrong2 = document.querySelector(".wrong2")
+const disnone = document.querySelector(".disnone")
+const disblock = document.querySelector(".disblock")
+const cube = document.querySelector(".cube")
+const cross = document.querySelector(".cross")
 
 container.addEventListener("click", e => {
     if (e.target.matches(".box1")) {
@@ -18,6 +21,10 @@ container.addEventListener("click", e => {
     if (e.target.matches(".box3")) {
         text.innerHTML = "Box 3"
     }
+})
+
+disnone.addEventListener("click", () => {
+    cube.style.display = "none"
 })
 
 const randFunc = [shuffle1, shuffle2, shuffle3];
@@ -53,7 +60,6 @@ function shuffle3() {
 }
 document.addEventListener("click", e => {
     if (e.target.matches(".button2")) {
-        text.innerHTML = "Right or Wrong?"
         box1.style.animation = "box11 2s linear"
         box2.style.animation = "box12 2s linear"
         box3.style.animation = "box13 2s linear"
