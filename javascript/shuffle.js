@@ -7,9 +7,13 @@ const right = document.querySelector(".right")
 const wrong = document.querySelector(".wrong")
 const wrong2 = document.querySelector(".wrong2")
 const disnone = document.querySelector(".disnone")
+const disnonexy = document.querySelector(".disnonexy")
 const disblock = document.querySelector(".disblock")
+const disblockxy = document.querySelector(".disblockxy")
 const cube = document.querySelector(".cube")
+const cube2 = document.querySelector(".cube2")
 const cross = document.querySelector(".cross")
+const cross2 = document.querySelector(".cross2")
 
 container.addEventListener("click", e => {
     if (e.target.matches(".box1")) {
@@ -23,8 +27,25 @@ container.addEventListener("click", e => {
     }
 })
 
-disnone.addEventListener("click", () => {
-    cube.style.display = "none"
+disnone.addEventListener("click", function() {
+    setTimeout( function() {
+        cube.style.display = "none"
+        cube2.style.display = "none"
+    }, 3000)
+        cube.style.animation = "cubes 3s linear"
+        cube2.style.animation = "cubes 3s linear"
+})
+disblock.addEventListener("click", () => {
+    cube.style.display = "flex"
+    cube2.style.display = "flex"
+})
+disnonexy.addEventListener("click", () => {
+    cross.style.display = "none"
+    cross2.style.display = "none"
+})
+disblockxy.addEventListener("click", () => {
+    cross.style.display = "flex"
+    cross2.style.display = "flex"
 })
 
 const randFunc = [shuffle1, shuffle2, shuffle3];
