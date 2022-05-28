@@ -7,9 +7,6 @@ const right = document.querySelector(".right")
 const wrong = document.querySelector(".wrong")
 const wrong2 = document.querySelector(".wrong2")
 const disnone = document.querySelector(".disnone")
-const disnonexy = document.querySelector(".disnonexy")
-const disblock = document.querySelector(".disblock")
-const disblockxy = document.querySelector(".disblockxy")
 const cube = document.querySelector(".cube")
 const cube2 = document.querySelector(".cube2")
 const cross = document.querySelector(".cross")
@@ -28,25 +25,45 @@ container.addEventListener("click", e => {
 })
 
 disnone.addEventListener("click", function() {
+        cube.style.animation = "cubes 3s linear"
+        cube2.style.animation = "cubes 3s linear"
     setTimeout( function() {
         cube.style.display = "none"
         cube2.style.display = "none"
     }, 3000)
-        cube.style.animation = "cubes 3s linear"
-        cube2.style.animation = "cubes 3s linear"
-})
-disblock.addEventListener("click", () => {
-    cube.style.display = "flex"
-    cube2.style.display = "flex"
-})
-disnonexy.addEventListener("click", () => {
-    cross.style.display = "none"
-    cross2.style.display = "none"
-})
-disblockxy.addEventListener("click", () => {
-    cross.style.display = "flex"
-    cross2.style.display = "flex"
-})
+    setTimeout( function() {
+        cross.style.display = "flex"
+        cross.style.animation = "none"
+        cross.style.opacity = "0"
+        cross2.style.display = "flex"
+        cross2.style.animation = "none"
+        cross2.style.opacity = "0"
+    }, 3100)
+    setTimeout( function() {
+        cross.style.animation = "cross 3s linear forwards"
+        cross2.style.animation = "cross 3s linear forwards"
+    }, 3300)
+    setTimeout( function() {
+        cross.style.animation = "cross2 3s linear forwards"
+        cross2.style.animation = "cross2 3s linear forwards"
+    }, 6300)
+    setTimeout( function() {
+        cross.style.display = "none"
+        cross2.style.display = "none"
+    }, 9400)
+    setTimeout( function() {
+        cube.style.display = "flex"
+        cube.style.animation = "none"
+        cube.style.opacity = "0"
+        cube2.style.display = "flex"
+        cube2.style.animation = "none"
+        cube2.style.opacity = "0"
+    }, 9500)
+    setTimeout( function() {
+        cube.style.animation = "cubes2 3s linear forwards"
+        cube2.style.animation = "cubes2 3s linear forwards"
+    }, 9600)
+    })
 
 const randFunc = [shuffle1, shuffle2, shuffle3];
 

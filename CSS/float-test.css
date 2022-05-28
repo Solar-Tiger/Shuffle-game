@@ -231,10 +231,25 @@
     font-size: 32px;
     cursor: pointer;
 }
+.cross, .cross2 {
+    display: none;
+}
 button {
     margin: 5px;
 }
 @keyframes cubes {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@keyframes cubes2 {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes cross {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes cross2 {
     from {opacity: 1;}
     to {opacity: 0;}
 }
