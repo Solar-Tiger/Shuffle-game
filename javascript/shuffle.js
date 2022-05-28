@@ -11,8 +11,9 @@ const cube = document.querySelector(".cube")
 const cube2 = document.querySelector(".cube2")
 const cross = document.querySelector(".cross")
 const cross2 = document.querySelector(".cross2")
+const text = document.querySelector(".text")
 
-container.addEventListener("click", e => {
+document.addEventListener("click", e => {
     if (e.target.matches(".box1")) {
         text.innerHTML = "Box 1"
     }
@@ -24,47 +25,6 @@ container.addEventListener("click", e => {
     }
 })
 
-disnone.addEventListener("click", function() {
-        cube.style.animation = "cubes 3s linear"
-        cube2.style.animation = "cubes 3s linear"
-    setTimeout( function() {
-        cube.style.display = "none"
-        cube2.style.display = "none"
-    }, 3000)
-    setTimeout( function() {
-        cross.style.display = "flex"
-        cross.style.animation = "none"
-        cross.style.opacity = "0"
-        cross2.style.display = "flex"
-        cross2.style.animation = "none"
-        cross2.style.opacity = "0"
-    }, 3100)
-    setTimeout( function() {
-        cross.style.animation = "cross 3s linear forwards"
-        cross2.style.animation = "cross 3s linear forwards"
-    }, 3300)
-    setTimeout( function() {
-        cross.style.animation = "cross2 3s linear forwards"
-        cross2.style.animation = "cross2 3s linear forwards"
-    }, 6300)
-    setTimeout( function() {
-        cross.style.display = "none"
-        cross2.style.display = "none"
-    }, 9400)
-    setTimeout( function() {
-        cube.style.display = "flex"
-        cube.style.animation = "none"
-        cube.style.opacity = "0"
-        cube2.style.display = "flex"
-        cube2.style.animation = "none"
-        cube2.style.opacity = "0"
-    }, 9500)
-    setTimeout( function() {
-        cube.style.animation = "cubes2 3s linear forwards"
-        cube2.style.animation = "cubes2 3s linear forwards"
-    }, 9600)
-    })
-
 const randFunc = [shuffle1, shuffle2, shuffle3];
 
 btn.addEventListener("click", () => {
@@ -72,36 +32,216 @@ btn.addEventListener("click", () => {
 });
 
 function shuffle1() {
-    box1.style.animation = "fade 4s linear forwards, box1 2.5s linear 16s forwards"
-    right.style.animation = "answers 6s linear 4s"
-    box2.style.animation = "fade 4s linear forwards, box2 2.5s linear 16s forwards"
-    wrong.style.animation = "answers 6s linear 4s"
-    box3.style.animation = "fade 4s linear forwards, box3 2.5s linear 16s forwards"
-    wrong2.style.animation = "answers 6s linear 4s"
+        box1.style.animation = "cubes 3s linear"
+        box2.style.animation = "cubes 3s linear"
+        box3.style.animation = "cubes 3s linear"
+    setTimeout( function() {
+        box1.style.display = "none"
+        box2.style.display = "none"
+        box3.style.display = "none"
+    }, 3000)
+    setTimeout( function() {
+        right.style.display = "flex"
+        right.style.animation = "none"
+        right.style.opacity = "0"
+        wrong.style.display = "flex"
+        wrong.style.animation = "none"
+        wrong.style.opacity = "0"
+        wrong2.style.display = "flex"
+        wrong2.style.animation = "none"
+        wrong2.style.opacity = "0"
+    }, 3100)
+    setTimeout( function() {
+        right.style.animation = "cross 3s linear forwards"
+        wrong.style.animation = "cross 3s linear forwards"
+        wrong2.style.animation = "cross 3s linear forwards"
+    }, 3300)
+    setTimeout( function() {
+        right.style.animation = "cross2 3s linear forwards"
+        wrong.style.animation = "cross2 3s linear forwards"
+        wrong2.style.animation = "cross2 3s linear forwards"
+    }, 6400)
+    setTimeout( function() {
+        right.style.display = "none"
+        wrong.style.display = "none"
+        wrong2.style.display = "none"
+    }, 9500)
+    setTimeout( function() {
+        box1.style.display = "flex"
+        box1.style.animation = "none"
+        box1.style.opacity = "0"
+        box2.style.display = "flex"
+        box2.style.animation = "none"
+        box2.style.opacity = "0"
+        box3.style.display = "flex"
+        box3.style.animation = "none"
+        box3.style.opacity = "0"
+    }, 9700)
+    setTimeout( function() {
+        box1.style.animation = "cubes2 3s linear forwards, box1 2.5s linear 3.1s forwards"
+        box2.style.animation = "cubes2 3s linear forwards, box2 2.5s linear 3.1s forwards"
+        box3.style.animation = "cubes2 3s linear forwards, box3 2.5s linear 3.1s forwards"
+    }, 9800)
 }
 
 function shuffle2() {
-    box1.style.animation = "fade 4s linear forwards, box4 2.5s linear 16s forwards"
-    right.style.animation = "answers 6s linear 4s"
-    box2.style.animation = "fade 4s linear forwards, box5 2.5s linear 16s forwards"
-    wrong.style.animation = "answers 6s linear 4s"
-    box3.style.animation = "fade 4s linear forwards, box6 2.5s linear 16s forwards"
-    wrong2.style.animation = "answers 6s linear 4s"
+        box1.style.animation = "cubes 3s linear"
+        box2.style.animation = "cubes 3s linear"
+        box3.style.animation = "cubes 3s linear"
+    setTimeout( function() {
+        box1.style.display = "none"
+        box2.style.display = "none"
+        box3.style.display = "none"
+    }, 3000)
+    setTimeout( function() {
+        right.style.display = "flex"
+        right.style.animation = "none"
+        right.style.opacity = "0"
+        wrong.style.display = "flex"
+        wrong.style.animation = "none"
+        wrong.style.opacity = "0"
+        wrong2.style.display = "flex"
+        wrong2.style.animation = "none"
+        wrong2.style.opacity = "0"
+    }, 3100)
+    setTimeout( function() {
+        right.style.animation = "cross 3s linear forwards"
+        wrong.style.animation = "cross 3s linear forwards"
+        wrong2.style.animation = "cross 3s linear forwards"
+    }, 3300)
+    setTimeout( function() {
+        right.style.animation = "cross2 3s linear forwards"
+        wrong.style.animation = "cross2 3s linear forwards"
+        wrong2.style.animation = "cross2 3s linear forwards"
+    }, 6400)
+    setTimeout( function() {
+        right.style.display = "none"
+        wrong.style.display = "none"
+        wrong2.style.display = "none"
+    }, 9500)
+    setTimeout( function() {
+        box1.style.display = "flex"
+        box1.style.animation = "none"
+        box1.style.opacity = "0"
+        box2.style.display = "flex"
+        box2.style.animation = "none"
+        box2.style.opacity = "0"
+        box3.style.display = "flex"
+        box3.style.animation = "none"
+        box3.style.opacity = "0"
+    }, 9700)
+    setTimeout( function() {
+        box1.style.animation = "cubes2 3s linear forwards, box4 2.5s linear 3.1s forwards"
+        box2.style.animation = "cubes2 3s linear forwards, box5 2.5s linear 3.1s forwards"
+        box3.style.animation = "cubes2 3s linear forwards, box6 2.5s linear 3.1s forwards"
+    }, 9800)
 }
 function shuffle3() {
-    box1.style.animation = "fade 4s linear forwards, box7 2.5s linear 16s forwards"
-    right.style.animation = "answers 6s linear 4s"
-    box2.style.animation = "fade 4s linear forwards, box8 2.5s linear 16s forwards"
-    wrong.style.animation = "answers 6s linear 4s"
-    box3.style.animation = "fade 4s linear forwards, box9 2.5s linear 16s forwards"
-    wrong2.style.animation = "answers 6s linear 4s"
+        box1.style.animation = "cubes 3s linear"
+        box2.style.animation = "cubes 3s linear"
+        box3.style.animation = "cubes 3s linear"
+    setTimeout( function() {
+        box1.style.display = "none"
+        box2.style.display = "none"
+        box3.style.display = "none"
+    }, 3000)
+    setTimeout( function() {
+        right.style.display = "flex"
+        right.style.animation = "none"
+        right.style.opacity = "0"
+        wrong.style.display = "flex"
+        wrong.style.animation = "none"
+        wrong.style.opacity = "0"
+        wrong2.style.display = "flex"
+        wrong2.style.animation = "none"
+        wrong2.style.opacity = "0"
+    }, 3100)
+    setTimeout( function() {
+        right.style.animation = "cross 3s linear forwards"
+        wrong.style.animation = "cross 3s linear forwards"
+        wrong2.style.animation = "cross 3s linear forwards"
+    }, 3300)
+    setTimeout( function() {
+        right.style.animation = "cross2 3s linear forwards"
+        wrong.style.animation = "cross2 3s linear forwards"
+        wrong2.style.animation = "cross2 3s linear forwards"
+    }, 6400)
+    setTimeout( function() {
+        right.style.display = "none"
+        wrong.style.display = "none"
+        wrong2.style.display = "none"
+    }, 9500)
+    setTimeout( function() {
+        box1.style.display = "flex"
+        box1.style.animation = "none"
+        box1.style.opacity = "0"
+        box2.style.display = "flex"
+        box2.style.animation = "none"
+        box2.style.opacity = "0"
+        box3.style.display = "flex"
+        box3.style.animation = "none"
+        box3.style.opacity = "0"
+    }, 9700)
+    setTimeout( function() {
+        box1.style.animation = "cubes2 3s linear forwards, box7 2.5s linear 3.1s forwards"
+        box2.style.animation = "cubes2 3s linear forwards, box8 2.5s linear 3.1s forwards"
+        box3.style.animation = "cubes2 3s linear forwards, box9 2.5s linear 3.1s forwards"
+    }, 9800)
 }
+
 document.addEventListener("click", e => {
     if (e.target.matches(".button2")) {
-        box1.style.animation = "box11 2s linear"
-        box2.style.animation = "box12 2s linear"
-        box3.style.animation = "box13 2s linear"
+        box1.style.animation = "box11 1s linear"
+        box2.style.animation = "box12 1s linear"
+        box3.style.animation = "box13 1s linear"
     }
+})
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+//        setTimeout over several fade in/out events
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+
+disnone.addEventListener("click", function() {
+    cube.style.animation = "cubes 3s linear"
+    cube2.style.animation = "cubes 3s linear"
+setTimeout( function() {
+    cube.style.display = "none"
+    cube2.style.display = "none"
+}, 3000)
+setTimeout( function() {
+    cross.style.display = "flex"
+    cross.style.animation = "none"
+    cross.style.opacity = "0"
+    cross2.style.display = "flex"
+    cross2.style.animation = "none"
+    cross2.style.opacity = "0"
+}, 3100)
+setTimeout( function() {
+    cross.style.animation = "cross 3s linear forwards"
+    cross2.style.animation = "cross 3s linear forwards"
+}, 3300)
+setTimeout( function() {
+    cross.style.animation = "cross2 3s linear forwards"
+    cross2.style.animation = "cross2 3s linear forwards"
+}, 6300)
+setTimeout( function() {
+    cross.style.display = "none"
+    cross2.style.display = "none"
+}, 9400)
+setTimeout( function() {
+    cube.style.display = "flex"
+    cube.style.animation = "none"
+    cube.style.opacity = "0"
+    cube2.style.display = "flex"
+    cube2.style.animation = "none"
+    cube2.style.opacity = "0"
+}, 9500)
+setTimeout( function() {
+    cube.style.animation = "cubes2 3s linear forwards"
+    cube2.style.animation = "cubes2 3s linear forwards"
+}, 9600)
 })
 
 const testing = document.querySelector(".test");
