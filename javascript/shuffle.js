@@ -1,4 +1,4 @@
-const container = document.querySelector(".container");
+const container = document.querySelector(".container")
 const btn = document.querySelector(".button")
 const box1 = document.querySelector(".box1")
 const box2 = document.querySelector(".box2")
@@ -13,15 +13,51 @@ const cross = document.querySelector(".cross")
 const cross2 = document.querySelector(".cross2")
 const text = document.querySelector(".text")
 
-document.addEventListener("click", e => {
+container.addEventListener("click", e => {
     if (e.target.matches(".box1")) {
         text.innerHTML = "Box 1"
+        box1.style.animation = "cubes 3s linear"
+        setTimeout( function() {
+            box1.style.display = "none"
+        }, 3000)
+        setTimeout( function() {
+            right.style.display = "flex"
+            right.style.animation = "none"
+            right.style.opacity = "0"
+        }, 3000)
+        setTimeout( function() {
+            right.style.animation = "cross 3s linear forwards"
+        }, 3000)
     }
     if (e.target.matches(".box2")) {
         text.innerHTML = "Box 2"
+        box2.style.animation = "cubes 3s linear"
+        setTimeout( function() {
+            box2.style.display = "none"
+        }, 3000)
+        setTimeout( function() {
+            wrong.style.display = "flex"
+            wrong.style.animation = "none"
+            wrong.style.opacity = "0"
+        }, 3000)
+        setTimeout( function() {
+            wrong.style.animation = "cross 3s linear forwards"
+        }, 3000)
     }
     if (e.target.matches(".box3")) {
         text.innerHTML = "Box 3"
+        box3.style.animation = "cubes 3s linear"
+        setTimeout( function() {
+            box3.style.display = "none"
+        }, 3000)
+        setTimeout( function() {
+            wrong2.style.display = "flex"
+            wrong2.style.animation = "none"
+            wrong2.style.opacity = "0"
+        }, 3000)
+        setTimeout( function() {
+            wrong2.style.animation = "cross 3s linear forwards"
+        }, 3000)
     }
 })
 
@@ -191,9 +227,28 @@ function shuffle3() {
 
 document.addEventListener("click", e => {
     if (e.target.matches(".button2")) {
-        box1.style.animation = "box11 1s linear"
-        box2.style.animation = "box12 1s linear"
-        box3.style.animation = "box13 1s linear"
+            box1.style.display = "flex"
+            box2.style.display = "flex"
+            box3.style.display = "flex"
+        setTimeout( function(){
+            box1.style.animation = "none"
+            box2.style.animation = "none"
+            box3.style.animation = "none"
+        },500)
+        setTimeout( function(){
+            box1.style.opacity = "1"
+            box2.style.opacity = "1"
+            box3.style.opacity = "1"
+        }, 800)
+        setTimeout( function(){
+            box1.style.animation = "box11 1s linear"
+            box2.style.animation = "box12 1s linear"
+            box3.style.animation = "box13 1s linear"
+        }, 1000)
+        right.style.display = "none"
+        wrong.style.display = "none"
+        wrong2.style.display = "none"
+        text.innerHTML = "1, 2 or 3?"
     }
 })
 
