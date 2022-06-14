@@ -13,53 +13,8 @@ const cross = document.querySelector(".cross")
 const cross2 = document.querySelector(".cross2")
 const text = document.querySelector(".text")
 
-container.addEventListener("click", e => {
-    if (e.target.matches(".box1")) {
-        text.innerHTML = "Box 1"
-        box1.style.animation = "cubes 3s linear"
-        setTimeout( function() {
-            box1.style.display = "none"
-        }, 3000)
-        setTimeout( function() {
-            right.style.display = "flex"
-            right.style.animation = "none"
-            right.style.opacity = "0"
-        }, 3000)
-        setTimeout( function() {
-            right.style.animation = "cross 3s linear forwards"
-        }, 3000)
-    }
-    if (e.target.matches(".box2")) {
-        text.innerHTML = "Box 2"
-        box2.style.animation = "cubes 3s linear"
-        setTimeout( function() {
-            box2.style.display = "none"
-        }, 3000)
-        setTimeout( function() {
-            wrong.style.display = "flex"
-            wrong.style.animation = "none"
-            wrong.style.opacity = "0"
-        }, 3000)
-        setTimeout( function() {
-            wrong.style.animation = "cross 3s linear forwards"
-        }, 3000)
-    }
-    if (e.target.matches(".box3")) {
-        text.innerHTML = "Box 3"
-        box3.style.animation = "cubes 3s linear"
-        setTimeout( function() {
-            box3.style.display = "none"
-        }, 3000)
-        setTimeout( function() {
-            wrong2.style.display = "flex"
-            wrong2.style.animation = "none"
-            wrong2.style.opacity = "0"
-        }, 3000)
-        setTimeout( function() {
-            wrong2.style.animation = "cross 3s linear forwards"
-        }, 3000)
-    }
-})
+let a
+let b
 
 const randFunc = [shuffle1, shuffle2, shuffle3];
 
@@ -68,6 +23,7 @@ btn.addEventListener("click", () => {
 });
 
 function shuffle1() {
+        a = undefined
         box1.style.animation = "cubes 3s linear"
         box2.style.animation = "cubes 3s linear"
         box3.style.animation = "cubes 3s linear"
@@ -118,9 +74,11 @@ function shuffle1() {
         box2.style.animation = "cubes2 3s linear forwards, box2 2.5s linear 3.1s forwards"
         box3.style.animation = "cubes2 3s linear forwards, box3 2.5s linear 3.1s forwards"
     }, 9800)
+    b = setTimeout(option1, 9800)
 }
 
 function shuffle2() {
+        a = undefined
         box1.style.animation = "cubes 3s linear"
         box2.style.animation = "cubes 3s linear"
         box3.style.animation = "cubes 3s linear"
@@ -171,8 +129,10 @@ function shuffle2() {
         box2.style.animation = "cubes2 3s linear forwards, box5 2.5s linear 3.1s forwards"
         box3.style.animation = "cubes2 3s linear forwards, box6 2.5s linear 3.1s forwards"
     }, 9800)
+    b = setTimeout(option2, 9800)
 }
 function shuffle3() {
+        a = undefined
         box1.style.animation = "cubes 3s linear"
         box2.style.animation = "cubes 3s linear"
         box3.style.animation = "cubes 3s linear"
@@ -223,7 +183,72 @@ function shuffle3() {
         box2.style.animation = "cubes2 3s linear forwards, box8 2.5s linear 3.1s forwards"
         box3.style.animation = "cubes2 3s linear forwards, box9 2.5s linear 3.1s forwards"
     }, 9800)
+    b = setTimeout(option3, 9800)
 }
+
+function option1() {
+    a = 1
+}
+function option2() {
+    a = 2
+}
+function option3() {
+    a = 3
+}
+
+box1.addEventListener("click", () => {
+    if (a === 1) {
+        text.innerHTML = "Box 1"
+        box1.style.animation = "cubes 3s linear"
+        setTimeout( function() {
+            box1.style.display = "none"
+        }, 3000)
+        setTimeout( function() {
+            right.style.display = "flex"
+            right.style.animation = "none"
+            right.style.opacity = "0"
+        }, 3000)
+        setTimeout( function() {
+            right.style.animation = "cross 3s linear forwards"
+        }, 3000)
+    }
+})
+
+box2.addEventListener("click", () => {
+    if (a === 1) {
+        text.innerHTML = "Box 2"
+        box2.style.animation = "cubes 3s linear"
+        setTimeout( function() {
+            box2.style.display = "none"
+        }, 3000)
+        setTimeout( function() {
+            wrong.style.display = "flex"
+            wrong.style.animation = "none"
+            wrong.style.opacity = "0"
+        }, 3000)
+        setTimeout( function() {
+            wrong.style.animation = "cross 3s linear forwards"
+        }, 3000)
+    }
+})
+
+box3.addEventListener("click", () => {
+    if (a === 1) {
+        text.innerHTML = "Box 3"
+        box3.style.animation = "cubes 3s linear"
+        setTimeout( function() {
+            box3.style.display = "none"
+        }, 3000)
+        setTimeout( function() {
+            wrong2.style.display = "flex"
+            wrong2.style.animation = "none"
+            wrong2.style.opacity = "0"
+        }, 3000)
+        setTimeout( function() {
+            wrong2.style.animation = "cross 3s linear forwards"
+        }, 3000)
+    }
+})
 
 document.addEventListener("click", e => {
     if (e.target.matches(".button2")) {
