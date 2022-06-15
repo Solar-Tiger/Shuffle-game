@@ -131,6 +131,7 @@ function shuffle2() {
     }, 9800)
     b = setTimeout(option2, 9800)
 }
+
 function shuffle3() {
         a = undefined
         box1.style.animation = "cubes 3s linear"
@@ -234,6 +235,114 @@ box2.addEventListener("click", () => {
 
 box3.addEventListener("click", () => {
     if (a === 1) {
+        text.innerHTML = "Box 3"
+        box3.style.animation = "cubes 3s linear"
+        setTimeout( function() {
+            box3.style.display = "none"
+        }, 3000)
+        setTimeout( function() {
+            wrong2.style.display = "flex"
+            wrong2.style.animation = "none"
+            wrong2.style.opacity = "0"
+        }, 3000)
+        setTimeout( function() {
+            wrong2.style.animation = "cross 3s linear forwards"
+        }, 3000)
+    }
+})
+
+box1.addEventListener("click", () => {
+    if (a === 2) {
+        text.innerHTML = "Box 1"
+        box1.style.animation = "cubes 3s linear"
+        setTimeout( function() {
+            box1.style.display = "none"
+        }, 3000)
+        setTimeout( function() {
+            right.style.display = "flex"
+            right.style.animation = "none"
+            right.style.opacity = "0"
+        }, 3000)
+        setTimeout( function() {
+            right.style.animation = "cross 3s linear forwards"
+        }, 3000)
+    }
+})
+
+box2.addEventListener("click", () => {
+    if (a === 2) {
+        text.innerHTML = "Box 2"
+        box2.style.animation = "cubes 3s linear"
+        setTimeout( function() {
+            box2.style.display = "none"
+        }, 3000)
+        setTimeout( function() {
+            wrong.style.display = "flex"
+            wrong.style.animation = "none"
+            wrong.style.opacity = "0"
+        }, 3000)
+        setTimeout( function() {
+            wrong.style.animation = "cross 3s linear forwards"
+        }, 3000)
+    }
+})
+
+box3.addEventListener("click", () => {
+    if (a === 2) {
+        text.innerHTML = "Box 3"
+        box3.style.animation = "cubes 3s linear"
+        setTimeout( function() {
+            box3.style.display = "none"
+        }, 3000)
+        setTimeout( function() {
+            wrong2.style.display = "flex"
+            wrong2.style.animation = "none"
+            wrong2.style.opacity = "0"
+        }, 3000)
+        setTimeout( function() {
+            wrong2.style.animation = "cross 3s linear forwards"
+        }, 3000)
+    }
+})
+
+box1.addEventListener("click", () => {
+    if (a === 3) {
+        text.innerHTML = "Box 1"
+        box1.style.animation = "cubes 3s linear"
+        setTimeout( function() {
+            box1.style.display = "none"
+        }, 3000)
+        setTimeout( function() {
+            right.style.display = "flex"
+            right.style.animation = "none"
+            right.style.opacity = "0"
+        }, 3000)
+        setTimeout( function() {
+            right.style.animation = "cross 3s linear forwards"
+        }, 3000)
+    }
+})
+
+box2.addEventListener("click", () => {
+    if (a === 3) {
+        text.innerHTML = "Box 2"
+        box2.style.animation = "cubes 3s linear"
+        setTimeout( function() {
+            box2.style.display = "none"
+        }, 3000)
+        setTimeout( function() {
+            wrong.style.display = "flex"
+            wrong.style.animation = "none"
+            wrong.style.opacity = "0"
+        }, 3000)
+        setTimeout( function() {
+            wrong.style.animation = "cross 3s linear forwards"
+        }, 3000)
+    }
+})
+
+box3.addEventListener("click", () => {
+    if (a === 3) {
         text.innerHTML = "Box 3"
         box3.style.animation = "cubes 3s linear"
         setTimeout( function() {
