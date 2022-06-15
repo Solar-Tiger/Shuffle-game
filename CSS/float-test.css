@@ -241,75 +241,78 @@
     from {opacity: 1;}
     to {opacity: 0;}
 }
+
 @keyframes fadeOut1 {
-    from {}
-    to {}
+    from {opacity: 1; left: 60px; color: brown;}
+    to {opacity: 0; left: 60px; color: brown;}
 }
 @keyframes fadeOut2 {
-    from {}
-    to {}
+    from {opacity: 1; left: 60px; color: brown;}
+    to {opacity: 0; left: 60px; color: brown;}
 }
 @keyframes fadeOut3 {
-    from {}
-    to {}
-}
-@keyframes fadeOut4 {
-    from {}
-    to {}
-}
-@keyframes fadeOut5 {
-    from {}
-    to {}
-}
-@keyframes fadeOut6 {
-    from {}
-    to {}
-}
-@keyframes fadeOut7 {
-    from {}
-    to {}
-}
-@keyframes fadeOut8 {
-    from {}
-    to {}
-}
-@keyframes fadeOut9 {
-    from {}
-    to {}
+    from {opacity: 1; left: -120px; color: brown;}
+    to {opacity: 0; left: -120px; color: brown;}
 }
 @keyframes fadeIn1 {
-    from {}
-    to {}
+    from {opacity: 0; left: 60px;}
+    to {opacity: 1; left: 60px;}
 }
 @keyframes fadeIn2 {
-    from {}
-    to {}
+    from {opacity: 0; left: 60px;}
+    to {opacity: 1; left: 60px;}
 }
 @keyframes fadeIn3 {
-    from {}
-    to {}
+    from {opacity: 0; left: -120px;}
+    to {opacity: 1; left: -120px;}
+}
+
+@keyframes fadeOut4 {
+    from {opacity: 1; left: 120px; color: brown;}
+    to {opacity: 0; left: 120px; color: brown;}
+}
+@keyframes fadeOut5 {
+    from {opacity: 1; left: -60px; color: brown;}
+    to {opacity: 0; left: -60px; color: brown;}
+}
+@keyframes fadeOut6 {
+    from {opacity: 1; left: -60px; color: brown;}
+    to {opacity: 0; left: -60px; color: brown;}
 }
 @keyframes fadeIn4 {
-    from {}
-    to {}
+    from {opacity: 0; left: 120px;}
+    to {opacity: 1; left: 120px;}
 }
 @keyframes fadeIn5 {
-    from {}
-    to {}
+    from {opacity: 0; left: -60px;}
+    to {opacity: 1; left: -60px;}
 }
 @keyframes fadeIn6 {
-    from {}
-    to {}
+    from {opacity: 0; left: -60px;}
+    to {opacity: 1; left: -60px;}
+}
+
+@keyframes fadeOut7 {
+    from {opacity: 1; left: 0px; color: brown;}
+    to {opacity: 0; left: 0px; color: brown;}
+}
+@keyframes fadeOut8 {
+    from {opacity: 1; left: 60px; color: brown;}
+    to {opacity: 0; left: 60px; color: brown;}
+}
+@keyframes fadeOut9 {
+    from {opacity: 1; left: -60px; color: brown;}
+    to {opacity: 0; left: -60px; color: brown;}
 }
 @keyframes fadeIn7 {
-    from {}
-    to {}
+    from {opacity: 0; left: 0px;}
+    to {opacity: 1; left: 0px;}
 }
 @keyframes fadeIn8 {
-    from {}
-    to {}
+    from {opacity: 0; left: 60px;}
+    to {opacity: 1; left: 60px;}
 }
 @keyframes fadeIn9 {
-    from {}
-    to {}
+    from {opacity: 0; left: -60px;}
+    to {opacity: 1; left: -60px;}
 }
