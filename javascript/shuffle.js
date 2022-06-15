@@ -31,9 +31,9 @@ btn.addEventListener("click", () => {
 
 function shuffle1() {
         a = undefined
-        box1.style.animation = "cubes 3s linear"
-        box2.style.animation = "cubes 3s linear"
-        box3.style.animation = "cubes 3s linear"
+        box1.style.animation = "cubes 3s linear forwards"
+        box2.style.animation = "cubes 3s linear forwards"
+        box3.style.animation = "cubes 3s linear forwards"
     t1 = setTimeout( function() {
         box1.style.display = "none"
         box2.style.display = "none"
@@ -81,14 +81,14 @@ function shuffle1() {
         box2.style.animation = "cubes2 3s linear forwards, box2 2.5s linear 3.1s forwards"
         box3.style.animation = "cubes2 3s linear forwards, box3 2.5s linear 3.1s forwards"
     }, 9800)
-    b = setTimeout(option1, 9800)
+    b = setTimeout(option1, 14800)
 }
 
 function shuffle2() {
         a = undefined
-        box1.style.animation = "cubes 3s linear"
-        box2.style.animation = "cubes 3s linear"
-        box3.style.animation = "cubes 3s linear"
+        box1.style.animation = "cubes 3s linear forwards"
+        box2.style.animation = "cubes 3s linear forwards"
+        box3.style.animation = "cubes 3s linear forwards"
     t1 = setTimeout( function() {
         box1.style.display = "none"
         box2.style.display = "none"
@@ -136,14 +136,14 @@ function shuffle2() {
         box2.style.animation = "cubes2 3s linear forwards, box5 2.5s linear 3.1s forwards"
         box3.style.animation = "cubes2 3s linear forwards, box6 2.5s linear 3.1s forwards"
     }, 9800)
-    b = setTimeout(option2, 9800)
+    b = setTimeout(option2, 14800)
 }
 
 function shuffle3() {
         a = undefined
-        box1.style.animation = "cubes 3s linear"
-        box2.style.animation = "cubes 3s linear"
-        box3.style.animation = "cubes 3s linear"
+        box1.style.animation = "cubes 3s linear forwards"
+        box2.style.animation = "cubes 3s linear forwards"
+        box3.style.animation = "cubes 3s linear forwards"
     t1 = setTimeout( function() {
         box1.style.display = "none"
         box2.style.display = "none"
@@ -191,7 +191,7 @@ function shuffle3() {
         box2.style.animation = "cubes2 3s linear forwards, box8 2.5s linear 3.1s forwards"
         box3.style.animation = "cubes2 3s linear forwards, box9 2.5s linear 3.1s forwards"
     }, 9800)
-    b = setTimeout(option3, 9800)
+    b = setTimeout(option3,14800)
 }
 
 function option1() {
@@ -392,8 +392,30 @@ document.addEventListener("click", e => {
         text.innerHTML = "1, 2 or 3?"
         a = undefined
         clearTimeout(b)
-        setTimeout(b = undefined, 500)
-    }
+            setTimeout( function clear1() {
+                b = undefined}, 500)
+        clearTimeout(t1)
+            setTimeout( function clear2() {
+                t1 = undefined}, 500)
+        clearTimeout(t2)
+            setTimeout( function clear3() {
+                t2 = undefined}, 500)
+        clearTimeout(t3)
+            setTimeout( function clear4() {
+                t3 = undefined}, 500)
+        clearTimeout(t4)
+            setTimeout( function clear5() {
+                t4 = undefined}, 500)
+        clearTimeout(t5)
+            setTimeout( function clear6() {
+                t5 = undefined}, 500)
+        clearTimeout(t6)
+            setTimeout( function clear7() {
+                t6 = undefined}, 500)
+        clearTimeout(t7)
+            setTimeout( function clear8() {
+                t7 = undefined}, 500)
+        }
 })
 
 // ---------------------------------------------------------------
