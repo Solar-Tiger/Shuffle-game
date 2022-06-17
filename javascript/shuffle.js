@@ -12,6 +12,7 @@ const cube2 = document.querySelector(".cube2")
 const cross = document.querySelector(".cross")
 const cross2 = document.querySelector(".cross2")
 const text = document.querySelector(".text")
+const fate = document.querySelector(".rightOrWrong")
 
 let a
 let b
@@ -27,6 +28,8 @@ const randFunc = [shuffle1, shuffle2, shuffle3];
 
 btn.addEventListener("click", () => {
     randFunc[Math.floor(Math.random() * randFunc.length)]();
+    btn.style.visibility = "hidden"
+    fate.innerHTML = "May fate guide you..."
 });
 
 function shuffle1() {
@@ -219,6 +222,10 @@ box1.addEventListener("click", () => {
         setTimeout( function() {
             right.style.animation = "fadeIn1 3s linear forwards"
         }, 3000)
+        setTimeout( function () {
+            fate.innerHTML = "You were right! ...this time"
+        }, 3000)
+        a = undefined
     }
 })
 
@@ -237,6 +244,10 @@ box2.addEventListener("click", () => {
         setTimeout( function() {
             wrong.style.animation = "fadeIn2 3s linear forwards"
         }, 3000)
+        setTimeout( function () {
+            fate.innerHTML = "Fate doesn't smile kindly on you..."
+        }, 3000)
+        a = undefined
     }
 })
 
@@ -255,6 +266,10 @@ box3.addEventListener("click", () => {
         setTimeout( function() {
             wrong2.style.animation = "fadeIn3 3s linear forwards"
         }, 3000)
+        setTimeout( function () {
+            fate.innerHTML = "Fate doesn't smile kindly on you..."
+        }, 3000)
+        a = undefined
     }
 })
 
@@ -273,6 +288,10 @@ box1.addEventListener("click", () => {
         setTimeout( function() {
             right.style.animation = "fadeIn4 3s linear forwards"
         }, 3000)
+        setTimeout( function () {
+            fate.innerHTML = "You were right! ...this time"
+        }, 3000)
+        a = undefined
     }
 })
 
@@ -291,6 +310,10 @@ box2.addEventListener("click", () => {
         setTimeout( function() {
             wrong.style.animation = "fadeIn5 3s linear forwards"
         }, 3000)
+        setTimeout( function () {
+            fate.innerHTML = "Fate doesn't smile kindly on you..."
+        }, 3000)
+        a = undefined
     }
 })
 
@@ -309,6 +332,10 @@ box3.addEventListener("click", () => {
         setTimeout( function() {
             wrong2.style.animation = "fadeIn6 3s linear forwards"
         }, 3000)
+        setTimeout( function () {
+            fate.innerHTML = "Fate doesn't smile kindly on you..."
+        }, 3000)
+        a = undefined
     }
 })
 
@@ -327,6 +354,10 @@ box1.addEventListener("click", () => {
         setTimeout( function() {
             right.style.animation = "fadeIn7 3s linear forwards"
         }, 3000)
+        setTimeout( function () {
+            fate.innerHTML = "You were right! ...this time"
+        }, 3000)
+        a = undefined
     }
 })
 
@@ -345,6 +376,10 @@ box2.addEventListener("click", () => {
         setTimeout( function() {
             wrong.style.animation = "fadeIn8 3s linear forwards"
         }, 3000)
+        setTimeout( function () {
+            fate.innerHTML = "Fate doesn't smile kindly on you..."
+        }, 3000)
+        a = undefined
     }
 })
 
@@ -363,6 +398,10 @@ box3.addEventListener("click", () => {
         setTimeout( function() {
             wrong2.style.animation = "fadeIn9 3s linear forwards"
         }, 3000)
+        setTimeout( function () {
+            fate.innerHTML = "Fate doesn't smile kindly on you..."
+        }, 3000)
+        a = undefined
     }
 })
 
@@ -390,6 +429,8 @@ document.addEventListener("click", e => {
         wrong.style.display = "none"
         wrong2.style.display = "none"
         text.innerHTML = "1, 2 or 3?"
+        fate.innerHTML = "Will you be right or wrong...?"
+        btn.style.visibility = "visible"
         a = undefined
         clearTimeout(b)
             setTimeout( function clear1() {
