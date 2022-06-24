@@ -1,4 +1,4 @@
-const container = document.querySelector(".container")
+const boxContainer = document.querySelector(".box-container")
 const btn = document.querySelector(".button")
 const box1 = document.querySelector(".box1")
 const box2 = document.querySelector(".box2")
@@ -13,6 +13,39 @@ const cross = document.querySelector(".cross")
 const cross2 = document.querySelector(".cross2")
 const text = document.querySelector(".text")
 const fate = document.querySelector(".rightOrWrong")
+const letter1 = document.querySelector(".letter1")
+const letter2 = document.querySelector(".letter2")
+const letter3 = document.querySelector(".letter3")
+const letter4 = document.querySelector(".letter4")
+const letter5 = document.querySelector(".letter5")
+const letter6 = document.querySelector(".letter6")
+const letter7 = document.querySelector(".letter7")
+const letter8 = document.querySelector(".letter8")
+const letter9 = document.querySelector(".letter9")
+const letter10 = document.querySelector(".letter10")
+const letter11 = document.querySelector(".letter11")
+const letter12 = document.querySelector(".letter12")
+const letter13 = document.querySelector(".letter13")
+const letter14 = document.querySelector(".letter14")
+const letter15 = document.querySelector(".letter15")
+const letter16 = document.querySelector(".letter16")
+const letter17 = document.querySelector(".letter17")
+const letter18 = document.querySelector(".letter18")
+const letter19 = document.querySelector(".letter19")
+const letter20 = document.querySelector(".letter20")
+const letter21 = document.querySelector(".letter21")
+const letter22 = document.querySelector(".letter22")
+const letter23 = document.querySelector(".letter23")
+const letter24 = document.querySelector(".letter24")
+const letter25 = document.querySelector(".letter25")
+const letter26 = document.querySelector(".letter26")
+const letter27 = document.querySelector(".letter27")
+const word1 = document.querySelector(".word1")
+const word2 = document.querySelector(".word2")
+const word3 = document.querySelector(".word3")
+const word4 = document.querySelector(".word4")
+const word5 = document.querySelector(".word5")
+const word6 = document.querySelector(".word6")
 
 let a
 let b
@@ -26,10 +59,99 @@ let t7
 
 const randFunc = [shuffle1, shuffle2, shuffle3];
 
+function flip1() {
+    letter1.style.animation = "flip1 2s linear forwards"
+  }
+
+function wordCrunch() {
+    word3.style.animation = "heightWidthZero 2.5s linear forwards"
+    word5.style.animation = "heightWidthZero 2.5s linear forwards"
+    word2.style.animation = "marginLeftZero 2.5s linear forwards"
+}
+
 btn.addEventListener("click", () => {
     randFunc[Math.floor(Math.random() * randFunc.length)]();
     btn.style.visibility = "hidden"
-    fate.innerHTML = "May fate guide you..."
+    flip1()
+    wordCrunch()
+    setTimeout(function() {
+        letter2.style.animation = "flip1 2s linear forwards"
+    }, 100)
+    setTimeout(function() {
+        letter3.style.animation = "flip1 2s linear forwards"
+    }, 200)
+    setTimeout(function() {
+        letter4.style.animation = "flip1 2s linear forwards"
+    }, 300)
+    setTimeout(function() {
+        letter5.style.animation = "flip1 2s linear forwards"
+    }, 400)
+    setTimeout(function() {
+        letter6.style.animation = "flip1 2s linear forwards"
+    }, 500)
+    setTimeout(function() {
+        letter7.style.animation = "flip1 2s linear forwards"
+    }, 600)
+    setTimeout(function() {
+        letter8.style.animation = "flip1 2s linear forwards"
+    }, 700)
+    setTimeout(function() {
+        letter9.style.animation = "flip1 2s linear forwards"
+    }, 800)
+    setTimeout(function() {
+        letter10.style.animation = "flip1 2s linear forwards"
+    }, 900)
+    setTimeout(function() {
+        letter11.style.animation = "flip1 2s linear forwards"
+    }, 1000)
+    setTimeout(function() {
+        letter12.style.animation = "flip1 2s linear forwards"
+    }, 1100)
+    setTimeout(function() {
+        letter13.style.animation = "flip1 2s linear forwards"
+    }, 1200)
+    setTimeout(function() {
+        letter14.style.animation = "flip1 2s linear forwards"
+    }, 1300)
+    setTimeout(function() {
+        letter15.style.animation = "flip1 2s linear forwards"
+    }, 1400)
+    setTimeout(function() {
+        letter16.style.animation = "flip1 2s linear forwards"
+    }, 1500)
+    setTimeout(function() {
+        letter17.style.animation = "flip1 2s linear forwards"
+    }, 1600)
+    setTimeout(function() {
+        letter18.style.animation = "flip1 2s linear forwards"
+    }, 1700)
+    setTimeout(function() {
+        letter19.style.animation = "flip1 2s linear forwards"
+    }, 1800)
+    setTimeout(function() {
+        letter20.style.animation = "flip1 2s linear forwards"
+    }, 1900)
+    setTimeout(function() {
+        letter21.style.animation = "flip1 2s linear forwards"
+    }, 2000)
+    setTimeout(function() {
+        letter22.style.animation = "flip1 2s linear forwards"
+    }, 2100)
+    setTimeout(function() {
+        letter23.style.animation = "flip1 2s linear forwards"
+    }, 2200)
+    setTimeout(function() {
+        letter24.style.animation = "flip1 2s linear forwards"
+    }, 2300)
+    setTimeout(function() {
+        letter25.style.animation = "flip1 2s linear forwards"
+    }, 2400)
+    setTimeout(function() {
+        letter26.style.animation = "flip1 2s linear forwards"
+    }, 2500)
+    setTimeout(function() {
+        letter27.style.animation = "flip1 2s linear forwards"
+    }, 2600)
 });
 
 function shuffle1() {
@@ -405,6 +527,42 @@ box3.addEventListener("click", () => {
     }
 })
 
+function reset() {
+  letter1.style.animation = "reset 2s linear forwards"
+  letter2.style.animation = "reset 2s linear forwards"
+  letter3.style.animation = "reset 2s linear forwards"
+  letter4.style.animation = "reset 2s linear forwards"
+  letter5.style.animation = "reset 2s linear forwards"
+  letter6.style.animation = "reset 2s linear forwards"
+  letter7.style.animation = "reset 2s linear forwards"
+  letter8.style.animation = "reset 2s linear forwards"
+  letter9.style.animation = "reset 2s linear forwards"
+  letter10.style.animation = "reset 2s linear forwards"
+  letter11.style.animation = "reset 2s linear forwards"
+  letter12.style.animation = "reset 2s linear forwards"
+  letter13.style.animation = "reset 2s linear forwards"
+  letter14.style.animation = "reset 2s linear forwards"
+  letter15.style.animation = "reset 2s linear forwards"
+  letter16.style.animation = "reset 2s linear forwards"
+  letter17.style.animation = "reset 2s linear forwards"
+  letter18.style.animation = "reset 2s linear forwards"
+  letter19.style.animation = "reset 2s linear forwards"
+  letter20.style.animation = "reset 2s linear forwards"
+  letter21.style.animation = "reset 2s linear forwards"
+  letter22.style.animation = "reset 2s linear forwards"
+  letter23.style.animation = "reset 2s linear forwards"
+  letter24.style.animation = "reset 2s linear forwards"
+  letter25.style.animation = "reset 2s linear forwards"
+  letter26.style.animation = "reset 2s linear forwards"
+  letter27.style.animation = "reset 2s linear forwards"
+}
+
+function wordStretch() {
+        word3.style.animation = "heightWidthNormal 1.5s linear forwards"
+        word5.style.animation = "heightWidthNormal 1.5s linear forwards"
+        word2.style.animation = "marginLeftNormal 1.5s linear forwards"
+}
+
 document.addEventListener("click", e => {
     if (e.target.matches(".button2")) {
             box1.style.display = "flex"
@@ -429,7 +587,6 @@ document.addEventListener("click", e => {
         wrong.style.display = "none"
         wrong2.style.display = "none"
         text.innerHTML = "1, 2 or 3?"
-        fate.innerHTML = "Will you be right or wrong...?"
         btn.style.visibility = "visible"
         a = undefined
         clearTimeout(b)
@@ -456,6 +613,8 @@ document.addEventListener("click", e => {
         clearTimeout(t7)
             setTimeout( function clear8() {
                 t7 = undefined}, 500)
+        reset()
+        wordStretch()
         }
 })
 

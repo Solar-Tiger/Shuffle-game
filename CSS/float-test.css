@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box
 }
-.container {
+.box-container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -10,13 +10,109 @@
     height: 500px;
     border: 2px solid black;
 }
-.rightOrWrong {
+
+.true-container {
+    display: flex;
+    justify-content: center;
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 5%;
-    left: 50%;
-    font-size: 24px;
-}
+    top: 105px;
+  }
+  
+  .word1 {
+    display: flex;
+  }
+  
+  .word2 {
+    display: flex;
+    margin-left: 16px;
+  }
+  
+  .word3 {
+    display: flex;
+    height: 20px;
+    width: 32px;
+    /* margin-left: 16px; */
+  }
+
+  .word4 {
+    display: flex;
+    margin-left: 14px;
+  }
+
+  .word5 {
+    display: flex;
+    height: 20px;
+    width: 32px;
+    margin-left: 16px;
+  }
+
+  .word6 {
+    display: flex;
+    /* margin-left: 16px; */
+  }
+  
+  .letters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 16px;
+    width: 14px;
+    /* transform: rotateY(.5turn); */
+    transform-style: preserve-3d;
+  }
+  
+  @keyframes flip1 {
+    from {transform: rotateY(0)}
+    to {transform: rotateY(.5turn)}
+  }
+  
+  @keyframes reset {
+    from {transform: rotateY(.5turn)}
+    to {transform: rotateY(0)}
+  }
+
+  @keyframes heightWidthZero {
+    from {height: 20px; width: 32px;}
+    to {height: 0; width: 0;}
+  }
+
+  @keyframes marginLeftZero {
+    from {margin-left: 16px;}
+    to {margin-left: 0;}
+  }
+
+  @keyframes heightWidthNormal {
+    from {height: 0; width: 0;}
+    to {height: 20px; width: 32px;}
+  }
+
+  @keyframes marginLeftNormal {
+    from {margin-left: 0;}
+    to {margin-left: 16px;}
+  }
+  
+  .front1,
+  .back1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backface-visibility: hidden;
+  }
+  
+  .front1{
+    transform: translateZ(4px);
+  }
+  
+  .back1 {
+    transform: translateZ(-4px) rotateY(.5turn);
+  }
+
 .box1, .box2, .box3 {
     display: flex;
     justify-content: center;
@@ -34,6 +130,7 @@
     font-size: 32px;
     cursor: pointer;
 }
+
 .right, .wrong, .wrong2 {
     display: flex;
     justify-content: center;
@@ -47,9 +144,11 @@
     font-size: 48px;
     display: none;
 }
+
 .button {
     margin: 10px;
 }
+
 @keyframes box11 {
     from {left: 0px;}
     to {left: 0px;}
@@ -62,6 +161,7 @@
     from {left: 0px;}
     to {left: 0px;}
 }
+
 @keyframes box1 {
     0% {left: 0px; top: 0px; color: yellow;}
     10% {left: 250px; top: 90px; color: yellow;}
@@ -182,6 +282,7 @@
     90% {left: 230px; top: -120px;}
     100% {left: -60px; top: 0px; color: brown;}
 }
+
 /* Stacking animation testing with a "Circle"
 .circle {
     display: flex;
@@ -212,6 +313,7 @@
     width: 250px;
     border: 2px solid black;
 }
+
 .cube, .cross, .cube2, .cross2 {
     display: flex;
     justify-content: center;
@@ -229,9 +331,11 @@
     font-size: 32px;
     cursor: pointer;
 }
+
 .cross, .cross2 {
     display: none;
 }
+
 @keyframes cubes {
     from {opacity: 1;}
     to {opacity: 0;}
